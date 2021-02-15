@@ -20,19 +20,100 @@ body {
 
 }
 
+/*
+    the header image
+*/
 
 .header {
     height: 95vh;
     background-image: linear-gradient(
     to right bottom,
-     #76d659f8,
-     #28b485), 
+     rgba(98, 216, 78, 0.8),
+     rgba(27, 175, 123, 0.8)), 
+     url(../img/lolu-cusine-menu.jpg);
+    
+   
+     background-size: cover;
+     background-position: top;
+    position: relative;
 
-    url(../img/lolu-cuisne-header.jpg);
-
-    background-size: cover;
-    background-position: bottom;
-
-    clip-path: polygon();
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100);
 
 }
+
+/* styling the logo div which serves as container for the logo */
+
+.logo-box {
+position: absolute;
+/*  this top and left reference uses the header parent as reference which is set as the relative positioning */
+
+top: 40px;
+left: 40px;
+
+
+}
+/* styling the logo itself */
+
+.header-logo {
+    height: 35px;
+
+}
+
+.text-box {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    /* adjust from -50% of the parent element to 50% of the element itself. The Div text-box now becomes centered */ 
+    transform: translate(140px, 80px);
+}
+.header-primary {
+    display: block;
+    color: #751717;
+    text-transform: uppercase;
+    }
+
+
+
+
+
+
+.header-primary-main {
+    display: block;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 17.4px;
+
+    animation-name: moveInLeftDirection;
+    animation-duration: 15s;
+
+}
+
+.header-primary-sub {
+    display: block;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 17.4px;
+}
+
+
+@keyframes moveInLeftDirection {
+    0%{
+
+        opacity: 0;
+       /* transform: translateX(-100);*/
+
+    }
+
+    60%{
+
+
+    }
+    100% {
+        opacity: 1;
+       /* transform: translate(0);*/
+       
+
+    }
+}
+
+
